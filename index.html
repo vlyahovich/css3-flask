@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Flask</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	  .flask {
+        position: relative;
+        width: 100px;
+        height: 120px;
+    }
+    
+    .flask__top {
+        width: 104%;
+        height: 4%;
+        margin-left: -2%;
+        background: rgb(241, 241, 241);
+        border-radius: 10px;
+        z-index: 10;
+    }
+    
+    .flask__tube {
+        width: 100%;
+        height: 100%;
+        background: rgb(209, 210, 212);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 9;
+    }
+    
+    .flask__reflect {
+        width: 65%;
+        height: 95%;
+        background: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        border-bottom-left-radius: 10px;
+        z-index: 10;
+    }
+    
+    .flask__reflect__line {
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -10%;
+        background: rgba(255, 255, 255, 0.4);
+    }
+    
+    .flask__liquid {
+        width: 90%;
+        height: 95%;
+        margin-left: 5%;
+        background: rgb(30, 165, 122);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .flask__liquid__overlap {
+        width: 100%;
+        height: 30%;
+        position: relative;
+        background: rgb(209, 210, 212);
+        z-index: 9;
+    }
+    
+    .flask__liquid__bulb {
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        bottom: -20%;
+        z-index: 6;
+        animation-name: flask__bulb;
+        animation-iteration-count: infinite;
+    }
+    
+    .flask__bulb_1 {
+        width: 10px;
+        height: 10px;
+        left: 10%;
+        border-radius: 50%;
+        animation-duration: 4s;
+    }
+    
+    .flask__bulb_2 {
+        width: 14px;
+        height: 14px;
+        left: 30%;
+        border-radius: 50%;
+        animation-duration: 3s;
+    }
+    
+    .flask__bulb_3 {
+        width: 10px;
+        height: 10px;
+        left: 45%;
+        border-radius: 50%;
+        animation-duration: 5s;
+    }
+    
+    .flask__bulb_4 {
+        width: 20px;
+        height: 20px;
+        left: 70%;
+        border-radius: 50%;
+        animation-duration: 3.5s;
+    }
+    
+    .flask__bulb_2 .flask__bulb__circle {
+        width: 10px;
+        height: 10px;
+        background: rgb(30, 165, 122);
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+    }
+    
+    .flask__bulb_4 .flask__bulb__circle {
+        width: 16px;
+        height: 16px;
+        background: rgb(30, 165, 122);
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+    }
+    
+    @keyframes flask__bulb {
+        from {bottom: -20%;}
+        to {bottom: 90%;}
+    }
+	</style>
+</head>
+<body>
+  <div class="flask">
+    <div class="flask__top"></div>
+    <div class="flask__tube">
+        <div class="flask__reflect">
+            <div class="flask__reflect__line"></div>
+        </div>
+        <div class="flask__liquid">
+            <div class="flask__liquid__overlap"></div>
+            <div class="flask__liquid__bulb flask__bulb_1"></div>
+            <div class="flask__liquid__bulb flask__bulb_2">
+                <div class="flask__bulb__circle"></div>
+            </div>
+            <div class="flask__liquid__bulb flask__bulb_3"></div>
+            <div class="flask__liquid__bulb flask__bulb_4">
+                <div class="flask__bulb__circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
